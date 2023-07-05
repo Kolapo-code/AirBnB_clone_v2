@@ -14,9 +14,9 @@ env.key_filename = '~/.ssh/id_rsa'
 def do_deploy(archive_path):
     """Deploy web files to server
         """
-        try:
-            if not (path.exists(archive_path)):
-                return False
+    try:
+        if not (path.exists(archive_path)):
+        return False
 
             # upload archive
                 put(archive_path, '/tmp/')
@@ -49,8 +49,8 @@ def do_deploy(archive_path):
                 # re-establish symbolic link
                 run('sudo ln -s /data/web_static/releases/\
                         web_static_{}/ /data/web_static/current'.format(timestamp))
-        except:
-            return False
+    except:
+        return False
 
         # return True on success
         return True
