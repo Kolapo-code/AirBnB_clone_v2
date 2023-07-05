@@ -16,7 +16,7 @@ def do_deploy(archive_path):
         """
     try:
         if not (path.exists(archive_path)):
-        return False
+            return False
 
             # upload archive
                 put(archive_path, '/tmp/')
